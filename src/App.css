@@ -1,0 +1,65 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background: #fff;
+  line-height: 1.5;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: #0645ad; }
+button { font: inherit; }
+:focus-visible { outline: 2px solid #0645ad; outline-offset: 3px; }
+.page { max-width: 1100px; margin: 0 auto; padding: 24px 20px; }
+.page-heading { margin-bottom: 24px; }
+.eyebrow { color: #555; font-size: 14px; }
+h1 { margin: 12px 0; font-size: 30px; line-height: 1.3; }
+h2 { margin: 12px 0; font-size: 24px; line-height: 1.3; }
+h3 { font-size: 18px; margin: 20px 0 8px; }
+p { margin: 0 0 16px; }
+nav { display: flex; flex-wrap: wrap; gap: 10px 24px; }
+nav a { font-size: 14px; }
+.panel { padding-top: 20px; margin-bottom: 28px; border-top: 1px solid #ccc; scroll-margin-top: 16px; }
+.section-note, .image-caption, .image-status { color: #555; font-size: 14px; }
+.biography, .interests { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.color-element { padding: 12px; border: 1px solid #ccc; cursor: pointer; background: #f5f5f5; }
+.color-element:hover { border-color: #777; }
+.birth-blue { background-color: blue; color: white; }
+.birth-yellow { background-color: yellow; color: black; }
+.education-lime { background-color: lime; color: black; }
+.education-purple { background-color: purple; color: white; }
+.interests { margin-bottom: 20px; }
+.interests h3 { margin-top: 4px; }
+ul, ol { padding-left: 23px; margin: 8px 0; }
+.place-description { max-width: 85ch; }
+.city-image { display: block; max-width: 100%; height: auto; }
+.image-caption { margin: 8px 0 16px; }
+.image-controls { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.image-controls button { padding: 6px 14px; border: 1px solid #999; border-radius: 3px; background: #eee; color: #222; cursor: pointer; }
+.image-controls button:hover:not(:disabled) { background: #ddd; }
+.image-controls button:disabled { background: #f5f5f5; color: #777; border-color: #ccc; cursor: default; }
+.image-status { margin: 12px 0 0; }
+.goods-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
+.goods-card { display: flex; flex-direction: column; border: 1px solid #ccc; }
+.goods-photo { padding: 16px; }
+.goods-photo img { display: block; width: 100%; height: 190px; object-fit: contain; }
+.goods-details { padding: 0 16px 16px; display: flex; flex-direction: column; flex: 1; }
+.goods-details h3 { font-size: 16px; line-height: 1.5; margin: 0 0 14px; }
+.goods-price { font-size: 18px; font-weight: 700; margin: auto 0 0; }
+footer { color: #555; font-size: 13px; border-top: 1px solid #ccc; padding-top: 16px; }
+
+@media (max-width: 800px) {
+  .goods-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .biography { grid-template-columns: 1fr; gap: 0; }
+}
+
+@media (max-width: 520px) {
+  .page { padding: 20px 14px; }
+  h1 { font-size: 26px; }
+  h2 { font-size: 22px; }
+  nav, .interests { display: flex; flex-direction: column; gap: 12px; }
+  .goods-grid { grid-template-columns: 1fr; gap: 16px; }
+  .goods-photo img { height: 180px; }
+  .image-controls { display: grid; grid-template-columns: 1fr 1fr; }
+  .image-controls button { padding: 10px 6px; }
+}
